@@ -89,9 +89,6 @@ def callback(call):
     except requests.exceptions.Timeout:
         logging.error("Превышено время ожидания ответа от API")
         bot.send_message(chat_id, "Превышено время ожидания ответа от API. Попробуйте позже.")
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Ошибка при запросе к API: {e}")
-        bot.send_message(chat_id, f"Произошла ошибка при запросе курсов валют: {e}")
     except json.JSONDecodeError:
         logging.error("Ошибка при обработке JSON-ответа от API")
         bot.send_message(chat_id, "Произошла ошибка при обработке ответа от API.")
