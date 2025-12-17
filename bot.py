@@ -19,7 +19,6 @@ user_amounts = {}
 
 bot = telebot.TeleBot(token=TOKEN)
 
-# Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 @bot.message_handler(commands=['start'])
